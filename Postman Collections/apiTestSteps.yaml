@@ -1,0 +1,254 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: apiTestSteps
+  description: Steps to test our apis
+  license:
+    name: MIT
+    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
+host: bcbsma-dev.apigee.net
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /clientsideencryption:
+    post:
+      description: 'TODO: Add Description'
+      summary: https://bcbsma-dev.apigee.net/clientsideencryption
+      tags:
+      - Misc
+      operationId: https://bcbsma-dev.apigee.net/clientsideencryption
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Https:~1~1bcbsmaDev.apigee.net~1clientsideencryptionrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /clientsideencryption
+          headers:
+            Content-Type: application/json
+          body: '{"mesg":"{\"regtypein\":\"EMAIL\",\"useridin\":\"bdiram01@test.com\",\"passwordin\":\"Password1\",\"receiveinfo\":\"yes\",\"tandcagreed\":\"true\"}","key1id":"61a3fa08527c4177963c01c086df3460"}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: https://bcbsma-dev.apigee.net/clientsideencryption
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  ? >
+    /registermem
+  : post:
+      description: 'TODO: Add Description'
+      summary: https://bcbsma-test.apigee.net/registermem
+      tags:
+      - Misc
+      operationId: https://bcbsma-test.apigee.net/registermem
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Https:~1~1bcbsmaTest.apigee.net~1registermemrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: >
+            /registermem
+          headers:
+            Content-Type: application/json
+          body: >-
+            {
+                "message": "995B9FE02A51347DF6411EFC40BAF62FFB3CBDC92DD55344B2EF7035B93F31D8DA6BE8AAC7DDABFE3A3EA14066B80D7E4F54E9F4B2FA5F6740E046B9D6022140D8BCCAE5642CDB1DF29DD589893C0BFB1B4CF627BD0DCAE7112957C98757AF620142CAECF7F6D947F4500623520F908CD55CFD5E10E340A4E1889FDA0679FC2E",
+                "key1id": "61a3fa08527c4177963c01c086df3460"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: https://bcbsma-test.apigee.net/registermem
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /gettokens:
+    get:
+      description: 'TODO: Add Description'
+      summary: https://mobilememberstage.bluecrossma.com/memapi_test/mobilekeyservice/v1/gettokens
+      tags:
+      - Misc
+      operationId: https://mobilememberstage.bluecrossma.com/memapi_test/mobilekeyservice/v1/gettokens
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /gettokens
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: https://mobilememberstage.bluecrossma.com/memapi_test/mobilekeyservice/v1/gettokens
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /memberlogin:
+    post:
+      description: 'TODO: Add Description'
+      summary: https://bcbsma-test.apigee.net/memberlogin
+      tags:
+      - Misc
+      operationId: https://bcbsma-test.apigee.net/memberlogin
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Https:~1~1bcbsmaTest.apigee.net~1memberloginrequest'
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+      security: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /memberlogin
+          headers:
+            Content-Type: application/json
+          body: >-
+            {
+                "message": "7623060EEDB61F27ED2671EC630EF231A487949551A469CE3537EC4722133BC1465BD6BEDE84AD7AF48ECE156E96D7FA8CBB29FBA2D1F3E3FF19A30CA11922BF5F8B34E5B1E17F483394835EA1885AD6CA1D25E0D0D53A7E95D73FC65553106CA6C32B527D7612230F7C07F6DF5404D3",
+                "key1id": "cf14a936372e4aa28ace8fde285c2ebe"
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: https://bcbsma-test.apigee.net/memberlogin
+        x-testDescription: 'TODO: Add Description'
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  Https://bcbsmaDev.apigee.net/clientsideencryptionrequest:
+    title: https://bcbsma-dev.apigee.net/clientsideencryptionRequest
+    example:
+      mesg: '{"regtypein":"EMAIL","useridin":"bdiram01@test.com","passwordin":"Password1","receiveinfo":"yes","tandcagreed":"true"}'
+      key1id: 61a3fa08527c4177963c01c086df3460
+    type: object
+    properties:
+      mesg:
+        description: ''
+        type: string
+      key1id:
+        description: ''
+        type: string
+    required:
+    - mesg
+    - key1id
+  Https://bcbsmaTest.apigee.net/registermemrequest:
+    title: https://bcbsma-test.apigee.net/registermemRequest
+    example:
+      message: 995B9FE02A51347DF6411EFC40BAF62FFB3CBDC92DD55344B2EF7035B93F31D8DA6BE8AAC7DDABFE3A3EA14066B80D7E4F54E9F4B2FA5F6740E046B9D6022140D8BCCAE5642CDB1DF29DD589893C0BFB1B4CF627BD0DCAE7112957C98757AF620142CAECF7F6D947F4500623520F908CD55CFD5E10E340A4E1889FDA0679FC2E
+      key1id: 61a3fa08527c4177963c01c086df3460
+    type: object
+    properties:
+      message:
+        description: ''
+        type: string
+      key1id:
+        description: ''
+        type: string
+    required:
+    - message
+    - key1id
+  Https://bcbsmaTest.apigee.net/memberloginrequest:
+    title: https://bcbsma-test.apigee.net/memberloginRequest
+    example:
+      message: 7623060EEDB61F27ED2671EC630EF231A487949551A469CE3537EC4722133BC1465BD6BEDE84AD7AF48ECE156E96D7FA8CBB29FBA2D1F3E3FF19A30CA11922BF5F8B34E5B1E17F483394835EA1885AD6CA1D25E0D0D53A7E95D73FC65553106CA6C32B527D7612230F7C07F6DF5404D3
+      key1id: cf14a936372e4aa28ace8fde285c2ebe
+    type: object
+    properties:
+      message:
+        description: ''
+        type: string
+      key1id:
+        description: ''
+        type: string
+    required:
+    - message
+    - key1id
